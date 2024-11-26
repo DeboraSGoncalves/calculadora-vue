@@ -1,5 +1,29 @@
 <script setup>
+import { ref, computed } from 'vue';
 
+
+const number1 = ref(0);
+const number2 = ref(0);
+const operation = ref('add');
+
+
+const result = computed(() => {
+    const n1 = parseFloat(number1.value);
+    const n2 = parseFloat(number2.value);
+
+    switch (operation.value) {
+        case 'add':
+            return n1 + n2;
+        case 'subtract':
+            return n1 - n2;
+        case 'multiply':
+            return n1 * n2;
+        case 'divide':
+            return n2 !== 0 ? n1 / n2 : "Divisão por zero!";
+        default:
+            return "Operação inválida!";
+    }
+});
 </script>
 
 <template>
