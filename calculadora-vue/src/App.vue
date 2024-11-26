@@ -4,7 +4,7 @@
 
 <template>
   <div id="app">
-    <h1>Calculadora Aritmética</h1>
+    <h1>Calculadora</h1>
     <div class="calculator">
       <input type="number" v-model="number1" placeholder="Digite o primeiro número" />
       <select v-model="operation">
@@ -20,5 +20,22 @@
 </template>
 
 <style scoped>
+#app{
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin-top: 50px;
+}
+.calculator{
+  display: inline-block;
+  text-align: left;
+
+}
+input, select{
+  display: block;
+  margin: 10px 0;
+  padding: 5px;
+  font-size: 16px;
+}
+
 
 </style>
